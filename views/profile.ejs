@@ -1,0 +1,113 @@
+<%- include scripts %>
+    <div class="navbar-fixed">
+        <nav style="background-color: #1e88e5">
+            <div class="nav-wrapper col s10">
+                <a href="#" class="brand-logo left">Sure</a>
+                <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a id="show-info" onclick="M.toast({html: 'Abhiram Vanka'})" href="">Click here</a></li>
+                </ul> -->
+            </div>
+        </nav>
+    </div>
+    <%user.forEach(function(profile,index){%>
+        <div class="row">
+            <div class="col s2"></div>
+            <div class="col s8">
+                <div class="card-panel blue hoverable" style="text-align: center">
+                    <span class="white-text">
+                WELCOME <%=profile.FirstName%>
+                </span>
+                </div>
+            </div>
+            <br>
+            <div class="col s2" style="text-align: center">
+                <a class="waves-effect hoverable waves-light btn" href="/logout" style="background-color: #1e88e5;"><i class="material-icons left">home</i>Logout</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s2"></div>
+            <div class="col s8 hoverable">
+
+                <div class="card horizontal hoverable">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>
+                                <%=profile.FirstName%>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a>First Name</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card horizontal hoverable">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>
+                                <%=profile.LastName%>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a>Last Name</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal hoverable">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>
+                                <%=profile.Gender%>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a>Gender</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal hoverable">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>
+                                <%=profile.Email%>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a>Email</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal hoverable">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>
+                                <%=profile.Mobile%>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a>Mobile</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal hoverable">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>
+                                <%=profile.DOB%>
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a>Date of Birth</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="col s2"></div>
+        </div>
+        <%})%>
